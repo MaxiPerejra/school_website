@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Korepetycje z fizyki i matematyki</title>
+    <meta
+        name="description"
+        content="Korepetycje z fizyki i matematyki, zajęcia stacjonarne i online."
+    >
+
+    <link rel="stylesheet" href="./dist/output.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Imperial+Script&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100&display=swap" rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+
+<body class="min-h-screen box-border overscroll-x-none  bg-background text-text ">
+    <header class="block lg:hidden">
+        <input
+            class="menu-icon sr-only"
+            type="checkbox"
+            id="menu-icon"
+            name="menu-icon"
+            aria-label="Otwórz menu"
+        >
+        <label for="menu-icon" aria-hidden="true"></label>
+
+        <nav class="nav" aria-label="Nawigacja główna">
+            <ul class="pt-5">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="#o-nas">O nas</a></li>
+                <li><a href="galeria-zdjec.html">Galeria zdjęć</a></li>
+                <li><a href="Informacje.html">Informacje o zabiegach</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#opinie">Opinie</a></li>
+                <li><a href="cennik.html">Cennik</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="hero" class="relative pt-68 text-center md:pt-65 lg:pt-0 lg:min-h-svh overflow-hidden">
+                <div class="relative z-10 lg:absolute lg:top-[30%] lg:right-[10%] lg:w-[48%]">
+                    <h1>
+                        <span class="block pl-14 font-times text-5xl text-korepetycje md:text-7xl lg:pl-18 lg:text-5xl ">
+                            Korepetycje
+                        </span>
+            
+                        <span class="-mt-5 block font-times text-8xl italic text-pink md:text-9xl lg:text-9xl lg:-mt-8">
+                            Z fizyki
+                        </span>
+            
+                        <span class="-mt-3 block font-plex text-3xl font-thin uppercase text-korepetycje md:text-5xl lg:text-4xl"
+                            style="font-family: 'IBM Plex Serif'; font-weight: 100;">
+                            oraz matematyki
+                        </span>
+                    </h1>
+            
+                    <a href="#kontakt"
+                        class="mt-10 inline-flex items-center justify-center gap-3 rounded-4xl bg-pink p-3 font-baskerville font-bold text-light shadow-2xl lg:mt-8">
+                        <img src="zdjecia/ikonki/1.png"
+                            alt="" class="w-10" aria-hidden="true">
+            
+                        <span class="md:text-lg">
+                            Zarezerwuj termin
+                        </span>
+                    </a>
+                </div>
+
+                <div class="relative z-10 mt-10 flex justify-center lg:absolute lg:bottom-0 lg:left-[10%] lg:mt-0 lg:w-[43%]">
+                    <div class="relative w-full max-w-150  md:w-100">
+                        <img src="zdjecia/lidia/kulka_jasne.png"
+                            alt=""
+                            class="block w-full opacity-100 transition-opacity duration-500 dark:opacity-0"
+                            aria-hidden="true">
+            
+                        <img src="zdjecia/lidia/test.png"
+                            alt=""
+                            class="absolute inset-0 w-full opacity-0 transition-opacity duration-500 dark:opacity-100"
+                            aria-hidden="true">
+                    </div>
+                </div>
+
+                <label class="theme-switch absolute right-5 top-[60%] z-20 md:right-40 md:top-[60%] lg:left-[15%] lg:top-[50%]">
+                    <input
+                        type="checkbox"
+                        id="theme-toggle"
+                        class="sr-only"
+                        role="switch"
+                        aria-label="Włącz ciemny motyw"
+                    >
+                    <span class="theme-switch-track" aria-hidden="true">
+                        <span class="theme-icon theme-sun">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path d="M12 2v2"></path>
+                                <path d="M12 20v2"></path>
+                                <path d="m4.93 4.93 1.41 1.41"></path>
+                                <path d="m17.66 17.66 1.41 1.41"></path>
+                                <path d="M2 12h2"></path>
+                                <path d="M20 12h2"></path>
+                                <path d="m6.34 17.66-1.41 1.41"></path>
+                                <path d="m19.07 4.93-1.41 1.41"></path>
+                            </svg>
+                        </span>
+
+                        <span class="theme-icon theme-moon">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79"></path>
+                            </svg>
+                        </span>
+
+                        <span class="theme-switch-thumb"></span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="absolute -top-40 left-8 z-0 w-70 md:w-90 lg:w-70 lg:-top-20 lg:-right-10 lg:left-auto" aria-hidden="true">
+                <img
+                    src="zdjecia/obrazki/sonda.png"
+                    alt=""
+                    class="block w-full opacity-100 transition-opacity duration-500 dark:opacity-0"
+                >
+            
+                <img
+                    src="zdjecia/obrazki_ciemne/sonda.png"
+                    alt=""
+                    class="absolute inset-0 w-full opacity-0 transition-opacity duration-500 dark:opacity-100"
+                >
+            </div>
+
+            <div class="absolute top-43 left-2 z-0 w-40 md:w-60 md:top-[20%] lg:w-40 lg:top-[35%] lg:right-0 lg:left-auto" aria-hidden="true">
+                <img
+                    src="zdjecia/obrazki/logo.png"
+                    alt=""
+                    class="block w-full opacity-100 transition-opacity duration-500 dark:opacity-0"
+                >
+            
+                <img
+                    src="zdjecia/obrazki_ciemne/logo.png"
+                    alt=""
+                    class="absolute inset-0 w-full opacity-0 transition-opacity duration-500 dark:opacity-100"
+                >
+            </div>
+
+            <div class="absolute bottom-45 -left-38 z-0 w-90 md:w-120 lg:w-160 lg:top-0 lg:bottom-auto lg:-left-40 " aria-hidden="true">
+                <img
+                    src="zdjecia/obrazki/planety.png"
+                    alt=""
+                    class="block w-full opacity-100 transition-opacity duration-500 dark:opacity-0 lg:hidden"
+                >
+            
+                <img
+                    src="zdjecia/obrazki_ciemne/planety.png"
+                    alt=""
+                    class="absolute inset-0 w-full opacity-0 transition-opacity duration-500 dark:opacity-100 lg:hidden"
+                >
+                <img
+                    src="zdjecia/obrazki_xl/planety.png"
+                    alt=""
+                    class="w-full opacity-100 transition-opacity duration-500 dark:opacity-0 hidden lg:block"
+                >
+                <img
+                    src="zdjecia/obrazki_ciemne_xl/planety.png"
+                    alt=""
+                    class="absolute inset-0 w-full opacity-0 transition-opacity duration-500 dark:opacity-100 "
+                >
+                
+            </div>
+        </section>
+
+
+        <section id="o-nas" class="grid grid-cols-1 items-start gap-6 p-5 pt-10
+               md:grid-cols-2 md:gap-x-10 md:px-12 md:py-16
+               lg:relative lg:grid-cols-[1fr_1.15fr_1fr]
+               lg:grid-rows-2 lg:min-h-150 lg:py-0 xl:px-20"
+        >
+            <h2 class="sr-only">
+                O mnie i sposobie prowadzenia zajęć
+            </h2>
+    
+            <article
+                class="flex flex-col items-center justify-center p-3 text-center
+                    md:p-0
+                    lg:col-start-1 lg:row-start-1
+                    lg:items-start lg:justify-start lg:text-left lg:translate-x-30 lg:translate-y-5"
+            >
+                <div class="self-center">
+                    <img src="zdjecia/ikonki/2.png" alt=""
+                        class="block w-30 dark:hidden md:w-36 lg:w-25"
+                        loading="lazy" aria-hidden="true">
+        
+                    <img src="zdjecia/ikonki/11.png" alt=""
+                        class="hidden w-30 dark:block md:w-36 lg:w-25"
+                        loading="lazy" aria-hidden="true">
+                </div>
+        
+                <h3 class="font-times text-xl md:text-2xl lg:text-lg lg:leading-tight">
+                    Mam realne doświadczenie w pracy z ADHD,
+                    dyskalkulią, dysleksją i innymi SPE.
+                </h3>
+        
+                <p class="font-cormorant italic md:text-lg  lg:text-base lg:leading-snug">
+                    Pomagam dzieciom i młodzieży z różnymi specjalnymi
+                    potrzebami edukacyjnymi rozwijać się,
+                    osiągać upragnione cele i spełniać marzenia.
+                </p>
+            </article>
+    
+            <article
+                class="flex flex-col items-center justify-center p-3 text-center
+                    md:p-0
+                    lg:col-start-3 lg:row-start-2
+                    lg:items-start lg:justify-start lg:text-left lg:-translate-x-5"
+            >
+                <div class="self-center">
+                    <img src="zdjecia/ikonki/3.png" alt=""
+                        class="block w-30 dark:hidden md:w-36 lg:w-25"
+                        loading="lazy" aria-hidden="true">
+        
+                    <img src="zdjecia/ikonki/12.png" alt=""
+                        class="hidden w-30 dark:block md:w-36 lg:w-25"
+                        loading="lazy" aria-hidden="true">
+                </div>
+        
+                <h3 class="font-times text-xl md:text-2xl lg:text-lg  lg:leading-tight">
+                    Pomagam odnaleźć i utrzymać motywację.
+                </h3>
+        
+                <p class="font-cormorant italic md:text-lg lg:text-base lg:leading-snug">
+                    Pomagam odnaleźć większy sens i cel w uczeniu się.
+                    Krótkodystansowe cele (np. samo zdanie egzaminu
+                    lub sprawdzianu) powodują trudności w utrzymaniu
+                    motywacji i dyscypliny.
+                </p>
+            </article>
+    
+            <div
+                class="grid items-center justify-center
+                    md:col-span-2
+                    lg:col-span-1
+                    lg:col-start-2
+                    lg:row-start-1
+                    lg:row-span-2
+                    lg:self-end
+                    lg:justify-self-center"
+            >
+                <div class="relative w-full md:w-100 xl:w-105">
+                    <img
+                        src="zdjecia/lidia/lidia_jasne.png"
+                        alt=""
+                        class="block w-full pt-5 dark:hidden md:pt-0"
+                        loading="lazy"
+                        aria-hidden="true"
+                    >
+            
+                    <img
+                        src="zdjecia/lidia/3.png"
+                        alt=""
+                        class="hidden w-full pt-5 dark:block md:pt-0"
+                        loading="lazy"
+                        aria-hidden="true"
+                    >
+            
+                </div>
+            </div>
+    
+            <article
+                class="flex flex-col items-center justify-center p-3 text-center
+                    md:p-0
+                    lg:col-start-1 lg:row-start-2
+                    lg:items-start lg:justify-start lg:text-left lg:translate-x-5"
+            >
+                <div class="self-center">
+                    <img src="zdjecia/ikonki/4.png" alt=""
+                        class="block w-30 dark:hidden md:w-36 lg:w-25"
+                        loading="lazy" aria-hidden="true">
+        
+                    <img src="zdjecia/ikonki/13.png" alt=""
+                        class="hidden w-30 dark:block md:w-36 lg:w-25"
+                        loading="lazy" aria-hidden="true">
+                </div>
+        
+                <h3 class="-mt-3 font-times text-xl md:text-2xl lg:text-lg lg:leading-tight">
+                    Współpracuję z osobami niepełnosprawnymi.
+                </h3>
+        
+                <p class="font-cormorant italic md:text-lg lg:text-base lg:leading-snug">
+                    Mam doświadczenie w pracy z młodzieżą z różnymi
+                    niepełnosprawnościami (w tym w pracy z autyzmem).
+                </p>
+            </article>
+
+            <article
+                class="flex flex-col items-center justify-center p-3 text-center
+                    md:p-0
+                    lg:col-start-3 lg:row-start-1
+                    lg:items-start lg:justify-start lg:text-left lg:-translate-x-30 lg:translate-y-5"
+            >
+                <div class="self-center">
+                    <img src="zdjecia/ikonki/5.png" alt=""
+                        class="block w-30 dark:hidden md:w-36 lg:w-25"
+                        loading="lazy" aria-hidden="true">
+        
+                    <img src="zdjecia/ikonki/14.png" alt=""
+                        class="hidden w-30 dark:block md:w-36 lg:w-25"
+                        loading="lazy" aria-hidden="true">
+                </div>
+        
+                <h3 class="-mt-3 font-times text-xl md:text-2xl lg:text-lg lg:leading-tight">
+                    Moi uczniowie mają ze mną stały kontakt.
+                </h3>
+        
+                <p class="font-cormorant italic md:text-lg lg:text-base lg:leading-snug">
+                    Odpowiadam na pytania także poza godzinami zajęć.
+                    Moi uczniowie mogą pisać do mnie i odsyłać
+                    zdjęcia wykonanych zadań o każdej porze dnia i nocy.
+                </p>
+            </article>
+        </section>
+        <div class="relative lg:min-h-225 lg:overflow-hidden ">
+
+            <!-- TŁO I FALA NA LG -->
+            <svg
+                class="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
+                viewBox="0 0 1600 900"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+            >
+                <path
+                    d="M 80 0 L 1600 0 L 1600 620 C 1100 550, 530 480, 80 0 Z"
+                    fill="#475071"
+                />
+        
+                <path
+                    d="M 80 0 C 530 480, 1100 550, 1600 620"
+                    fill="none"
+                    stroke="var(--wave-edge)"
+                    stroke-width="28"
+                />
+        
+                <path
+                    d="M 80 0 C 530 480, 1100 550, 1600 620"
+                    fill="none"
+                    stroke="var(--background)"
+                    stroke-width="8"
+                />
+            </svg>
+        
+            <!-- EKSPERYMENTY -->
+            <section
+                class="relative grid items-center justify-center bg-bgblue
+                       text-center font-times text-light md:px-12
+                       lg:static lg:block lg:bg-transparent lg:px-0"
+            >
+                <div
+                    class="p-5
+                           lg:absolute lg:top-16 lg:left-[40%]
+                           lg:z-10 lg:w-[31%] lg:p-0 xl:left-[35%]"
+                >
+                    <h2 class="pt-2 text-2xl font-bold md:text-3xl lg:text-2xl">
+                        Przeprowadzam z uczniami eksperymenty fizyczne,
+                        ponieważ nauka przez praktykę jest również ważna.
+                    </h2>
+        
+                    <p class="pt-5 md:text-lg">
+                        Jeśli warunki na to pozwalają, staram się poświęcić
+                        trochę czasu na wykonanie ćwiczeń eksperymentalnych.
+                        To pozwala na lepsze zrozumienie zjawisk fizycznych,
+                        poznanie środowiska eksperymentalnego oraz narzędzi
+                        informatycznych używanych do opracowywania wyników.
+                    </p>
+                </div>
+        
+                <div
+                    class="grid items-center justify-center p-3 md:p-10
+                           lg:absolute lg:top-45 lg:right-[2%]
+                           lg:z-10 lg:w-[24%] lg:p-0
+                           xl:top-10 xl:right-[5%]"
+                >
+                    <img
+                        src="zdjecia/obrazki/eksperymenty.png"
+                        alt=""
+                        class="p-5 pb-10 md:w-100 lg:w-full lg:p-0 block lg:hidden"
+                        loading="lazy"
+                        aria-hidden="true"
+                    >
+                    <img
+                        src="zdjecia/obrazki_xl/eksperymenty.png"
+                        alt=""
+                        class="p-5 pb-10 md:w-100 lg:w-full lg:p-0 hidden lg:block"
+                        loading="lazy"
+                        aria-hidden="true"
+                    >
+
+                </div>
+        
+                <!-- ORYGINALNA FALA MOBILE / MD -->
+                <svg
+                    class="absolute left-0 -bottom-px block w-full
+                           h-[clamp(190px,28vw,330px)] lg:hidden"
+                    viewBox="0 0 1440 580"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="
+                            M -30 45
+                            C 170 170, 410 290, 700 390
+                            C 980 485, 1190 500, 1470 555
+                            L 1470 580
+                            L -30 580
+                            Z
+                        "
+                        fill="var(--background)"
+                    />
+        
+                    <path
+                        d="
+                            M -30 45
+                            C 170 170, 410 290, 700 390
+                            C 980 485, 1190 500, 1470 555
+                        "
+                        fill="none"
+                        stroke="var(--wave-edge)"
+                        stroke-width="28"
+                        stroke-linecap="round"
+                    />
+        
+                    <path
+                        d="
+                            M -30 28
+                            C 170 153, 410 273, 700 373
+                            C 980 468, 1190 483, 1470 538
+                        "
+                        fill="none"
+                        stroke="var(--background)"
+                        stroke-width="8"
+                        stroke-linecap="round"
+                    />
+                </svg>
+            </section>
+        
+            <!-- POSTĘPY -->
+            <section
+                id="postepy"
+                class="p-5 font-times md:px-12
+                       lg:absolute lg:inset-x-0 lg:top-[44%]
+                       lg:z-10 lg:px-8"
+            >
+                <!-- NAGŁÓWEK I OPIS -->
+                <div class="lg:max-w-[43%]">
+                    <h2 class="text-3xl font-bold md:text-3xl lg:text-2xl">
+                        Realna wizja postępów.
+                    </h2>
+        
+                    <p class="md:text-lg">
+                        Każdy uczeń otrzymuje dostęp do własnej
+                        <span class="font-bold dark:text-pink">
+                            tablicy postępów
+                        </span>,
+                        którą uzupełniamy wspólnie podczas nauki.
+                        W jednym miejscu widoczne są przerobione zagadnienia,
+                        wykonane prace domowe, wyniki testów sprawdzających
+                        oraz postęp przygotowań do egzaminu.
+                    </p>
+                </div>
+        
+                <!-- KOŁA + DOLNY OPIS -->
+                <div
+                    class="lg:mt-8 lg:grid
+                           lg:grid-cols-[1.3fr_1fr]
+                           lg:items-center lg:gap-8"
+                >
+                    <div
+                        class="flex items-start justify-center gap-5 pt-5
+                               lg:justify-start lg:pt-0"
+                    >
+                        <!-- CIĄGI -->
+                        <article
+                            class="flex flex-col items-center"
+                            role="img"
+                            aria-label="Ciągi: 20 procent"
+                        >
+                            <h3 class="mb-2 font-times text-xl md:text-2xl">
+                                Ciągi
+                            </h3>
+        
+                            <div class="relative h-25 w-25 md:h-35 md:w-35">
+                                <svg
+                                    class="h-full w-full"
+                                    viewBox="0 0 120 120"
+                                    aria-hidden="true"
+                                >
+                                    <circle
+                                        cx="60" cy="60" r="48"
+                                        fill="none"
+                                        stroke="var(--progress-track)"
+                                        stroke-width="20"
+                                    />
+        
+                                    <circle
+                                        class="progress-ring progress-ring__value"
+                                        style="--progress: 20"
+                                        cx="60" cy="60" r="48"
+                                        fill="none"
+                                        stroke="var(--progress-value)"
+                                        stroke-width="20"
+                                        pathLength="100"
+                                    />
+                                </svg>
+        
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="font-times text-2xl md:text-3xl">
+                                        20%
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+        
+                        <!-- TRYGONOMETRIA -->
+                        <article
+                            class="flex flex-col items-center"
+                            role="img"
+                            aria-label="Trygonometria: 67 procent"
+                        >
+                            <h3 class="mb-2 font-times text-xl md:text-2xl">
+                                Trygonometria
+                            </h3>
+        
+                            <div class="relative h-25 w-25 md:h-35 md:w-35">
+                                <svg
+                                    class="h-full w-full"
+                                    viewBox="0 0 120 120"
+                                    aria-hidden="true"
+                                >
+                                    <circle
+                                        cx="60" cy="60" r="48"
+                                        fill="none"
+                                        stroke="var(--progress-track)"
+                                        stroke-width="20"
+                                    />
+        
+                                    <circle
+                                        class="progress-ring progress-ring__value"
+                                        style="--progress: 67"
+                                        cx="60" cy="60" r="48"
+                                        fill="none"
+                                        stroke="var(--progress-value)"
+                                        stroke-width="20"
+                                        pathLength="100"
+                                    />
+                                </svg>
+        
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="font-times text-2xl md:text-3xl">
+                                        67%
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+        
+                        <!-- WIELOMIANY -->
+                        <article
+                            class="flex flex-col items-center"
+                            role="img"
+                            aria-label="Wielomiany: 90 procent"
+                        >
+                            <h3 class="mb-2 font-times text-xl md:text-2xl">
+                                Wielomiany
+                            </h3>
+        
+                            <div class="relative h-25 w-25 md:h-35 md:w-35">
+                                <svg
+                                    class="h-full w-full"
+                                    viewBox="0 0 120 120"
+                                    aria-hidden="true"
+                                >
+                                    <circle
+                                        cx="60" cy="60" r="48"
+                                        fill="none"
+                                        stroke="var(--progress-track)"
+                                        stroke-width="20"
+                                    />
+        
+                                    <circle
+                                        class="progress-ring progress-ring__value"
+                                        style="--progress: 90"
+                                        cx="60" cy="60" r="48"
+                                        fill="none"
+                                        stroke="var(--progress-value)"
+                                        stroke-width="20"
+                                        pathLength="100"
+                                    />
+                                </svg>
+        
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="font-times text-2xl md:text-3xl">
+                                        90%
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+        
+                    <!-- DOLNY OPIS -->
+                    <p class="pt-5 md:text-lg lg:pt-0">
+                        Dzięki procentowym podsumowaniom uczeń i rodzic
+                        mogą na bieżąco zobaczyć, co zostało już opanowane,
+                        co wymaga jeszcze powtórki i jak zmieniają się
+                        wyniki w czasie.
+                    </p>
+                </div>
+            </section>
+        
+        </div>
+
+        <section
+            id="filozofia"
+            class="p-5 font-times md:px-12 md:pt-20
+                lg:grid lg:grid-cols-[1fr_1.2fr]
+                lg:items-stretch lg:gap-0
+                    lg:py-0 lg:p-0"
+        >
+        <!-- LEWA KOLUMNA -->
+            <div class="lg:py-16 xl:py-20 lg:pl-10">
+                <h2 class="text-center lg:mb-8">
+                    <span
+                        class="block font-montserrat text-7xl font-bold
+                            text-pink md:text-8xl"
+                    >
+                        MOJA
+                    </span>
+        
+                    <span
+                        class="-mt-8 block font-script text-6xl
+                            md:text-7xl"
+                    >
+                        Filozofia
+                    </span>
+                </h2>
+        
+                <div class="space-y-4 pt-2 md:text-lg">
+                    <p>
+                        Wychodzę z założenia, że fizyka oraz matematyka
+                        to piękne dziedziny nauki i niesamowity dorobek
+                        ludzkiego intelektu. Na moich zajęciach nie
+                        skupiam się tylko i wyłącznie na suchym
+                        przygotowaniu do egzaminów i sprawdzianów.
+                        Staram się pokazywać moim uczniom piękno,
+                        które dostrzegam w tych naukach oraz
+                        użyteczność zdobywanej wiedzy.
+                    </p>
+        
+                    <p>
+                        Pomagam odnaleźć cel działań i motywację.
+                        Nie tylko uczę do egzaminów — prowadzę młodzież
+                        do ich marzeń i pokazuję, jak wykorzystać
+                        pełen potencjał wiedzy zdobytej
+                        w obowiązkowej edukacji.
+                    </p>
+        
+                    <p>
+                        Matematyka i fizyka stanowią podwaliny dla
+                        sztuki — w tym dla niezwykle bliskiej mi muzyki.
+                        Prowadzę także prywatne lekcje gry na fortepianie
+                        oraz wykłady na temat fizyki powstawania
+                        dźwięku i konstrukcji rozmaitych instrumentów
+                        muzycznych. Dążę do tego, aby moi uczniowie
+                        poznawali świat nie tylko poprzez czytanie
+                        podręczników i rozwiązywanie zadań ze zbiorów.
+                        Pokazuję, gdzie ta wiedza jest wykorzystywana
+                        w praktyce i ile pięknych rzeczy powstało
+                        na fundamentach tych potężnych nauk.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- PRAWA KOLUMNA - GRAFIKA -->
+            <figure
+                class="flex justify-end
+                    lg:relative lg:min-h-full lg:overflow-visible"
+            >
+                <img
+                    src="zdjecia/lidia/nuty.png"
+                    alt=""
+                    loading="lazy"
+                    aria-hidden="true"
+                    class="md:w-150
+                        lg:absolute lg:inset-0
+                        lg:h-full lg:w-full
+                        lg:object-contain lg:object-center"
+                >
+            </figure>
+        </section>
+
+
+        <section
+            id="forma-zajec"
+            class="relative isolate pt-10 text-center
+                md:px-12 md:pt-15
+                lg:min-h-[800px] lg:overflow-hidden
+                    lg:px-8 lg:pt-24 lg:pb-20
+                "
+        >
+    <!-- NAGŁÓWEK -->
+            <h2
+                class="relative z-10 font-plex text-5xl font-thin uppercase
+                    md:text-6xl lg:text-7xl"
+            >
+                Forma zajęć
+            </h2>
+
+    <!-- FORMY ZAJĘĆ -->
+            <div
+                class="relative z-10 flex items-center justify-center
+                    gap-3 p-5 pb-5 font-times md:gap-5
+                    lg:mt-6 lg:gap-20 lg:p-0"
+            >
+                <!-- STACJONARNIE -->
+                <article
+                    class="flex flex-col items-center justify-center gap-2
+                        lg:gap-4"
+                >
+                    <img
+                        src="zdjecia/obrazki/1.png"
+                        alt="Zajęcia stacjonarne"
+                        class="w-40 md:w-50
+                            lg:h-[280px] lg:w-[280px]
+                            lg:rounded-full lg:object-cover
+                            xl:h-[300px] xl:w-[300px]"
+                        loading="lazy"
+                    >
+
+                    <h3 class="text-xl md:text-2xl lg:text-3xl">
+                        Stacjonarnie w Gdyni
+                    </h3>
+                </article>
+
+                <!-- ONLINE -->
+                <article
+                    class="flex flex-col items-center justify-center gap-2
+                        lg:gap-4"
+                >
+                    <img
+                        src="zdjecia/obrazki/2.png"
+                        alt="Zajęcia online"
+                        class="w-40 md:w-50
+                            lg:h-[280px] lg:w-[280px]
+                            lg:rounded-full lg:object-cover
+                            xl:h-[300px] xl:w-[300px]"
+                        loading="lazy"
+                    >
+
+                    <h3 class="text-xl uppercase md:text-2xl lg:text-3xl">
+                        Online
+                    </h3>
+                </article>
+            </div>
+
+    <!-- PRZYCISK -->
+            <div
+                class="relative z-10 flex items-center justify-center
+                    lg:mt-14"
+            >
+                <a
+                    href="cennik.html"
+                    class="w-70 rounded-4xl bg-pink p-3
+                        font-times text-xl text-light md:text-2xl
+                        lg:w-[420px] lg:py-5 lg:text-3xl
+                        lg:shadow-2xl"
+                >
+                    Sprawdź cennik
+                </a>
+            </div>
+
+    <!-- TELESKOP -->
+            <div
+                class="flex items-center justify-center p-10
+                    lg:absolute lg:right-[3%] lg:bottom-[5%]
+                    lg:z-0 lg:w-[230px] lg:p-0
+                    xl:w-[280px]"
+            >
+                <img
+                    src="zdjecia/obrazki/teleskop.png"
+                    alt=""
+                    class="block h-50 dark:hidden md:w-60
+                        lg:h-auto lg:w-full"
+                    loading="lazy"
+                    aria-hidden="true"
+                >
+
+                <img
+                    src="zdjecia/obrazki_ciemne/teleskop.png"
+                    alt=""
+                    class="hidden h-50 dark:block md:w-60
+                        lg:h-auto lg:w-full"
+                    loading="lazy"
+                    aria-hidden="true"
+                >
+            </div>
+
+    <!-- ASTEROIDY -->
+            <div
+                class="flex items-center justify-center p-10
+                    lg:absolute lg:top-0 lg:left-[2%]
+                    lg:z-0 lg:w-[200px] lg:p-0
+                    xl:w-[330px]"
+            >
+                <img
+                    src="zdjecia/obrazki_xl/asteroida.png"
+                    alt=""
+                    class="block h-50 dark:hidden md:w-60
+                        lg:h-auto lg:w-full"
+                    loading="lazy"
+                    aria-hidden="true"
+                >
+
+                <img
+                    src="zdjecia/obrazki_ciemne_xl/asteroida.png"
+                    alt=""
+                    class="hidden h-50 dark:block md:w-60
+                        lg:h-auto lg:w-full"
+                    loading="lazy"
+                    aria-hidden="true"
+                >
+            </div>
+
+    <!-- ASTRONAUTA -->
+            <div
+                class="flex items-center justify-center p-10
+                    lg:absolute lg:top-0 lg:right-[1%]
+                    lg:z-0 lg:w-[240px] lg:p-0
+                    xl:w-[300px]"
+            >
+                <img
+                    src="zdjecia/obrazki_xl/astronauta.png"
+                    alt=""
+                    class="block h-50 dark:hidden md:w-60
+                        lg:h-auto lg:w-full"
+                    loading="lazy"
+                    aria-hidden="true"
+                >
+
+                <img
+                    src="zdjecia/obrazki_ciemne_xl/astronauta.png"
+                    alt=""
+                    class="hidden h-50 dark:block md:w-60
+                        lg:h-auto lg:w-full"
+                    loading="lazy"
+                    aria-hidden="true"
+                >
+            </div>
+        </section>
+
+        <section id="opinie" aria-labelledby="opinie-title" >
+            <h2 id="opinie-title" class="text-center font-montserrat text-6xl font-bold uppercase text-pink">
+                Opinie
+            </h2>
+
+            <div class="swiper opinie-desktop relative md:h-120  lg:px-10 lg:h-125">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/1.png" alt="Opinia 1" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/2.png" alt="Opinia 2" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/3.png" alt="Opinia 3" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/4.png" alt="Opinia 4" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/5.png" alt="Opinia 5" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/6.png" alt="Opinia 6" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/7.png" alt="Opinia 7" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/8.png" alt="Opinia 8" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/9.png" alt="Opinia 9" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/10.png" alt="Opinia 10" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
+                </div>
+                <button
+                    type="button"
+                    class="button-prev absolute left-1 top-1/2 z-20 h-10 w-10 -translate-y-1/2 rounded-full bg-pink"
+                    aria-label="Poprzednia opinia"
+                >
+                    ←
+                </button>
+
+                <button
+                    type="button"
+                    class="button-next absolute right-1 top-1/2 z-20 h-10 w-10 -translate-y-1/2 rounded-full bg-pink"
+                    aria-label="Następna opinia"
+                >
+                    →
+                </button>
+            </div>
+        </section>
+
+        <section id="kontakt" class="p-10 pt-10 text-center">
+            <h2 class="font-times text-4xl">Chcesz się ze mną skontaktować?</h2>
+
+            <div class="flex items-center justify-center pt-5">
+                <a
+                    href="sms:501969992"
+                    class="inline-flex w-50 items-center justify-center gap-3 rounded-4xl bg-pink p-3 font-times text-xl text-light shadow-2xl"
+                >
+                    <img src="zdjecia/ikonki/1.png" alt="" class="w-10" aria-hidden="true">
+                    <span>Napisz SMS</span>
+                </a>
+            </div>
+
+            <div class="flex justify-center">
+                <img src="zdjecia/ikonki/9.png" alt="" loading="lazy" aria-hidden="true">
+            </div>
+
+            <a href="tel:501969992" class="font-times text-xl md:text-2xl">Tel: 501969992</a>
+
+            <div class="flex items-center justify-center pt-5">
+                <a
+                    href="tel:501969992"
+                    class="inline-flex w-50 items-center justify-center gap-3 rounded-4xl bg-pink p-3 font-times text-xl text-light shadow-2xl"
+                >
+                    <img src="zdjecia/ikonki/10.png" alt="" class="w-10" aria-hidden="true">
+                    <span>Zadzwoń</span>
+                </a>
+            </div>
+
+            <p class="p-3 pt-10 font-times text-xl md:text-2xl">
+                Chętnie odpowiem na wszystkie pytania i w razie potrzeby podam dodatkowe informacje. Zapraszam do kontaktu!
+            </p>
+        </section>
+    </main>
+
+    <footer class="mt-10 block lg:hidden">
+        <div class="flex flex-col items-center justify-center">
+            <img src="zdjecia/przejscie/1.png" alt="" aria-hidden="true" class="w-full">
+        </div>
+
+        <div class="flex items-center justify-center md:gap-5">
+            <img src="zdjecia/ikonki/7.png" alt="" class="w-20" aria-hidden="true">
+
+            <div class="flex flex-col items-center justify-center">
+                <img src="zdjecia/obrazki/logo.png" alt="" class="w-50 block dark:hidden" aria-hidden="true">
+                <img src="zdjecia/obrazki_ciemne/logo.png" alt="" class="w-50 hidden dark:block" aria-hidden="true">
+                <span class="font-cormorant text-lg">Rosa Mirabilis</span>
+            </div>
+
+            <img src="zdjecia/ikonki/8.png" alt="" class="w-20" aria-hidden="true">
+        </div>
+
+        <div class="flex flex-row items-center justify-center pt-3 text-center font-cormorant">
+            <p>
+                © 2026 RosaMirabilis · Wszelkie prawa zastrzeżone · Autor: Maksymilian Kunikowski ·
+                <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+            </p>
+        </div>
+    </footer>
+
+
+
+    <div id="lightbox"
+    class="fixed inset-0 z-999 hidden items-center justify-center bg-black/85 p-5 opacity-0 transition-opacity duration-300">
+        <img
+            id="lightbox-img"
+            src=""
+            alt=""
+            class="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain transition-transform duration-300"
+        >
+    </div>
+</body>
+</html>

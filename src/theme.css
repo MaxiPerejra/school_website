@@ -1,0 +1,55 @@
+@theme inline {
+    --font-times: "Times New Roman", Times, serif;
+    --font-cormorant: "Cormorant Garamond", serif;
+    --font-baskerville: "Libre Baskerville", serif;
+    --font-smooch: "Smooch Sans", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-script: "Imperial Script", cursive;
+    --font-plex: "IBM Plex Serif", serif;
+
+    --color-background: var(--background);
+    --color-text: var(--text);
+    --color-korepetycje: var(--heading);
+
+    --color-pink: #a97794;
+    --color-dark: #323232;
+    --color-light: #e8e9f6;
+    --color-bgblue: #475071;
+}
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root,
+[data-theme="light"] {
+    --background: #e8e9f6;
+    --text: #000000;
+    --heading: #323232;
+
+    --wave-edge: #475071;
+    --progress-track: #ddbdca;
+    --progress-value: #ad7899;
+
+    --switch-background: #e8e9f6;
+    --switch-border: #475071;
+    --switch-icon: #475071;
+
+    --menu-background: #ce98b8;
+    --menu-foreground: #ececee;
+}
+
+[data-theme="dark"] {
+    --background: #3a3a3a;
+    --text: #e8e9f6;
+    --heading: #e8e9f6;
+
+    --wave-edge: #475071;
+    --progress-track: #6f5c66;
+    --progress-value: #c18aa8;
+
+    --switch-background: #323232;
+    --switch-border: #e8e9f6;
+    --switch-icon: #e8e9f6;
+
+    --menu-background: #8f637c;
+    --menu-foreground: #e8e9f6;
+}
