@@ -26,42 +26,77 @@
 </head>
 
 <body class="min-h-screen box-border overscroll-x-none  bg-background text-text ">
-    <header class="block lg:hidden">
-        <input
-            class="menu-icon sr-only"
-            type="checkbox"
-            id="menu-icon"
-            name="menu-icon"
-            aria-label="Otwórz menu"
-        >
-        <label for="menu-icon" aria-hidden="true"></label>
+    <header class="">
+        <div class="block lg:hidden">
+            <input
+                class="menu-icon sr-only"
+                type="checkbox"
+                id="menu-icon"
+                name="menu-icon"
+                aria-label="Otwórz menu"
+            >
+            <label for="menu-icon" aria-hidden="true"></label>
+    
+            <nav class="nav" aria-label="Nawigacja główna">
+                <ul class="pt-5">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="#o-nas">O nas</a></li>
+                    <li><a href="galeria-zdjec.html">Galeria zdjęć</a></li>
+                    <li><a href="Informacje.html">Informacje o zabiegach</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="#opinie">Opinie</a></li>
+                    <li><a href="cennik.html">Cennik</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hidden lg:block">
+            <nav
+                id="desktop-menu"
+                class="desktop-menu"
+                aria-label="Nawigacja główna"
+            >
+                <!-- MENU ZAMKNIĘTE -->
+                <button
+                    id="desktop-menu-toggle"
+                    class="desktop-menu__toggle font-times"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="desktop-menu-links"
+                >
+                    MENU
+                </button>
 
-        <nav class="nav" aria-label="Nawigacja główna">
-            <ul class="pt-5">
-                <li><a href="index.html">Strona główna</a></li>
-                <li><a href="#o-nas">O nas</a></li>
-                <li><a href="galeria-zdjec.html">Galeria zdjęć</a></li>
-                <li><a href="Informacje.html">Informacje o zabiegach</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-                <li><a href="#opinie">Opinie</a></li>
-                <li><a href="cennik.html">Cennik</a></li>
-            </ul>
-        </nav>
+                <!-- MENU OTWARTE -->
+                <div
+                    id="desktop-menu-links"
+                    class="desktop-menu__content"
+                >
+                    <div class="desktop-menu__links font-times">
+                        <a href="index.html">Strona główna</a>
+                        <a href="#filozofia">Moja filozofia</a>
+                        <a href="#opinie">Opinie</a>
+                        <a href="cennik.html">Cennik</a>
+                        <a href="#kontakt">Kontakt</a>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
     </header>
 
     <main id="main-content">
         <section id="hero" class="relative pt-68 text-center md:pt-65 lg:pt-0 lg:min-h-svh overflow-hidden">
                 <div class="relative z-10 lg:absolute lg:top-[30%] lg:right-[10%] lg:w-[48%]">
                     <h1>
-                        <span class="block pl-14 font-times text-5xl text-korepetycje md:text-7xl lg:pl-18 lg:text-5xl ">
+                        <span class="block pl-14 font-times text-5xl text-korepetycje md:text-7xl lg:pl-18 lg:text-5xl xl:text-6xl 2xl:text-7xl">
                             Korepetycje
                         </span>
             
-                        <span class="-mt-5 block font-times text-8xl italic text-pink md:text-9xl lg:text-9xl lg:-mt-8">
+                        <span class="-mt-5 block font-times text-8xl italic text-pink md:text-9xl lg:text-9xl lg:-mt-8 xl:text-10xl 2xl:text-11xl">
                             Z fizyki
                         </span>
             
-                        <span class="-mt-3 block font-plex text-3xl font-thin uppercase text-korepetycje md:text-5xl lg:text-4xl"
+                        <span class="-mt-3 block font-plex text-3xl font-thin uppercase text-korepetycje md:text-5xl lg:text-4xl xl:text-5xl"
                             style="font-family: 'IBM Plex Serif'; font-weight: 100;">
                             oraz matematyki
                         </span>
@@ -72,27 +107,30 @@
                         <img src="zdjecia/ikonki/1.png"
                             alt="" class="w-10" aria-hidden="true">
             
-                        <span class="md:text-lg">
+                        <span class="md:text-lg xl:text-xl">
                             Zarezerwuj termin
                         </span>
                     </a>
                 </div>
 
-                <div class="relative z-10 mt-10 flex justify-center lg:absolute lg:bottom-0 lg:left-[10%] lg:mt-0 lg:w-[43%]">
-                    <div class="relative w-full max-w-150  md:w-100">
+                <div class="relative z-10 mt-10 flex justify-center lg:absolute lg:bottom-0 lg:left-[10%] lg:mt-0 lg:w-[43%] 2xl:left-[15%]">
+                    <div class="relative w-full max-w-150  md:w-100 xl:w-150">
                         <img src="zdjecia/lidia/kulka_jasne.png"
                             alt=""
-                            class="block w-full opacity-100 transition-opacity duration-500 dark:opacity-0"
+                            class="block w-full opacity-100 transition-opacity duration-500 dark:opacity-0 xl:hidden"
                             aria-hidden="true">
             
                         <img src="zdjecia/lidia/test.png"
                             alt=""
-                            class="absolute inset-0 w-full opacity-0 transition-opacity duration-500 dark:opacity-100"
+                            class="absolute inset-0 w-full opacity-0 transition-opacity duration-500 dark:opacity-100 xl:hidden"
                             aria-hidden="true">
+
+                        <img src="zdjecia/lidia_2xl/kulka.png" alt="" class="hidden w-full opacity-100 transition-opacity duration-500 dark:opacity-0 xl:block " aria-hidden="true">
+                        <img src="zdjecia/lidia_2xl/kulka_ciemne.png" alt="" class="hidden absolute inset-0 w-full opacity-0 transition-opacity duration-500 dark:opacity-100 xl:block" aria-hidden="true">
                     </div>
                 </div>
 
-                <label class="theme-switch absolute right-5 top-[60%] z-20 md:right-40 md:top-[60%] lg:left-[15%] lg:top-[50%]">
+                <label class="theme-switch absolute right-5 top-[60%] z-20 md:right-40 md:top-[60%] lg:left-[15%] lg:top-[50%] 2xl:left-[20%]">
                     <input
                         type="checkbox"
                         id="theme-toggle"
@@ -142,7 +180,7 @@
                 </label>
             </div>
 
-            <div class="absolute -top-40 left-8 z-0 w-70 md:w-90 lg:w-70 lg:-top-20 lg:-right-10 lg:left-auto" aria-hidden="true">
+            <div class="absolute -top-40 left-8 z-0 w-70 md:w-90 lg:w-70 lg:-top-20 lg:-right-10 lg:left-auto xl:w-80" aria-hidden="true">
                 <img
                     src="zdjecia/obrazki/sonda.png"
                     alt=""
@@ -156,7 +194,7 @@
                 >
             </div>
 
-            <div class="absolute top-43 left-2 z-0 w-40 md:w-60 md:top-[20%] lg:w-40 lg:top-[35%] lg:right-0 lg:left-auto" aria-hidden="true">
+            <div class="absolute top-43 left-2 z-0 w-40 md:w-60 md:top-[20%] lg:w-40 lg:top-[35%] lg:right-0 lg:left-auto xl:w-60 xl:right-15 xl:top-[30%]" aria-hidden="true">
                 <img
                     src="zdjecia/obrazki/logo.png"
                     alt=""
@@ -170,7 +208,7 @@
                 >
             </div>
 
-            <div class="absolute bottom-45 -left-38 z-0 w-90 md:w-120 lg:w-160 lg:top-0 lg:bottom-auto lg:-left-40 " aria-hidden="true">
+            <div class="absolute bottom-45 -left-38 z-0 w-90 md:w-120 lg:w-160 lg:top-0 lg:bottom-auto lg:-left-40 xl:w-180" aria-hidden="true">
                 <img
                     src="zdjecia/obrazki/planety.png"
                     alt=""
@@ -183,15 +221,16 @@
                     class="absolute inset-0 w-full opacity-0 transition-opacity duration-500 dark:opacity-100 lg:hidden"
                 >
                 <img
-                    src="zdjecia/obrazki_xl/planety.png"
+                    src="zdjecia/obrazki_2xl/planety.png"
                     alt=""
                     class="w-full opacity-100 transition-opacity duration-500 dark:opacity-0 hidden lg:block"
                 >
                 <img
-                    src="zdjecia/obrazki_ciemne_xl/planety.png"
+                    src="zdjecia/obrazki_ciemne_2xl/planety.png"
                     alt=""
-                    class="absolute inset-0 w-full opacity-0 transition-opacity duration-500 dark:opacity-100 "
+                    class="absolute inset-0 w-full opacity-0 transition-opacity duration-500 dark:opacity-100 hidden lg:block"
                 >
+
                 
             </div>
         </section>
@@ -200,7 +239,7 @@
         <section id="o-nas" class="grid grid-cols-1 items-start gap-6 p-5 pt-10
                md:grid-cols-2 md:gap-x-10 md:px-12 md:py-16
                lg:relative lg:grid-cols-[1fr_1.15fr_1fr]
-               lg:grid-rows-2 lg:min-h-150 lg:py-0 xl:px-20"
+               lg:grid-rows-2 lg:min-h-150 lg:py-0 xl:px-20 xl:min-h-160 2xl:px-30"
         >
             <h2 class="sr-only">
                 O mnie i sposobie prowadzenia zajęć
@@ -210,7 +249,7 @@
                 class="flex flex-col items-center justify-center p-3 text-center
                     md:p-0
                     lg:col-start-1 lg:row-start-1
-                    lg:items-start lg:justify-start lg:text-left lg:translate-x-30 lg:translate-y-5"
+                    lg:items-start lg:justify-start lg:text-left lg:translate-x-30 lg:translate-y-5 xl:translate-x-50"
             >
                 <div class="self-center">
                     <img src="zdjecia/ikonki/2.png" alt=""
@@ -222,12 +261,12 @@
                         loading="lazy" aria-hidden="true">
                 </div>
         
-                <h3 class="font-times text-xl md:text-2xl lg:text-lg lg:leading-tight">
+                <h3 class="font-times text-xl md:text-2xl lg:text-lg lg:leading-tight xl:text-xl 2xl:text-2xl">
                     Mam realne doświadczenie w pracy z ADHD,
                     dyskalkulią, dysleksją i innymi SPE.
                 </h3>
         
-                <p class="font-cormorant italic md:text-lg  lg:text-base lg:leading-snug">
+                <p class="font-cormorant italic md:text-lg  lg:text-base lg:leading-snug xl:text-lg 2xl:text-xl">
                     Pomagam dzieciom i młodzieży z różnymi specjalnymi
                     potrzebami edukacyjnymi rozwijać się,
                     osiągać upragnione cele i spełniać marzenia.
@@ -238,7 +277,7 @@
                 class="flex flex-col items-center justify-center p-3 text-center
                     md:p-0
                     lg:col-start-3 lg:row-start-2
-                    lg:items-start lg:justify-start lg:text-left lg:-translate-x-5"
+                    lg:items-start lg:justify-start lg:text-left lg:-translate-x-5 xl:-translate-x-15"
             >
                 <div class="self-center">
                     <img src="zdjecia/ikonki/3.png" alt=""
@@ -250,11 +289,11 @@
                         loading="lazy" aria-hidden="true">
                 </div>
         
-                <h3 class="font-times text-xl md:text-2xl lg:text-lg  lg:leading-tight">
+                <h3 class="font-times text-xl md:text-2xl lg:text-lg  lg:leading-tight xl:text-xl 2xl:text-2xl">
                     Pomagam odnaleźć i utrzymać motywację.
                 </h3>
         
-                <p class="font-cormorant italic md:text-lg lg:text-base lg:leading-snug">
+                <p class="font-cormorant italic md:text-lg lg:text-base lg:leading-snug xl:text-lg 2xl:text-xl">
                     Pomagam odnaleźć większy sens i cel w uczeniu się.
                     Krótkodystansowe cele (np. samo zdanie egzaminu
                     lub sprawdzianu) powodują trudności w utrzymaniu
@@ -272,23 +311,43 @@
                     lg:self-end
                     lg:justify-self-center"
             >
-                <div class="relative w-full md:w-100 xl:w-105">
-                    <img
+                    <div class="relative w-full md:w-100 xl:w-105">
+                        <img
                         src="zdjecia/lidia/lidia_jasne.png"
                         alt=""
-                        class="block w-full pt-5 dark:hidden md:pt-0"
+                        class="block w-full pt-5 md:pt-0
+                            dark:hidden xl:hidden"
                         loading="lazy"
                         aria-hidden="true"
                     >
-            
+                    
                     <img
                         src="zdjecia/lidia/3.png"
                         alt=""
-                        class="hidden w-full pt-5 dark:block md:pt-0"
+                        class="hidden w-full pt-5 md:pt-0
+                            dark:block xl:hidden xl:dark:hidden"
                         loading="lazy"
                         aria-hidden="true"
                     >
-            
+                    
+                    <img
+                        src="zdjecia/lidia_2xl/lidia.png"
+                        alt=""
+                        class="hidden w-full pt-5 md:pt-0
+                            xl:block xl:dark:hidden"
+                        loading="lazy"
+                        aria-hidden="true"
+                    >
+                    
+                    <!-- XL / 2XL - DARK -->
+                    <img
+                        src="zdjecia/lidia_2xl/lidia_ciemne.png"
+                        alt=""
+                        class="hidden w-full pt-5 md:pt-0
+                            xl:dark:block"
+                        loading="lazy"
+                        aria-hidden="true"
+                    >
                 </div>
             </div>
     
@@ -296,7 +355,7 @@
                 class="flex flex-col items-center justify-center p-3 text-center
                     md:p-0
                     lg:col-start-1 lg:row-start-2
-                    lg:items-start lg:justify-start lg:text-left lg:translate-x-5"
+                    lg:items-start lg:justify-start lg:text-left lg:translate-x-5 xl:translate-x-15"
             >
                 <div class="self-center">
                     <img src="zdjecia/ikonki/4.png" alt=""
@@ -308,11 +367,11 @@
                         loading="lazy" aria-hidden="true">
                 </div>
         
-                <h3 class="-mt-3 font-times text-xl md:text-2xl lg:text-lg lg:leading-tight">
+                <h3 class="-mt-3 font-times text-xl md:text-2xl lg:text-lg lg:leading-tight xl:text-xl 2xl:text-2xl">
                     Współpracuję z osobami niepełnosprawnymi.
                 </h3>
         
-                <p class="font-cormorant italic md:text-lg lg:text-base lg:leading-snug">
+                <p class="font-cormorant italic md:text-lg lg:text-base lg:leading-snug xl:text-lg 2xl:text-xl">
                     Mam doświadczenie w pracy z młodzieżą z różnymi
                     niepełnosprawnościami (w tym w pracy z autyzmem).
                 </p>
@@ -322,7 +381,7 @@
                 class="flex flex-col items-center justify-center p-3 text-center
                     md:p-0
                     lg:col-start-3 lg:row-start-1
-                    lg:items-start lg:justify-start lg:text-left lg:-translate-x-30 lg:translate-y-5"
+                    lg:items-start lg:justify-start lg:text-left lg:-translate-x-30 lg:translate-y-5 xl:-translate-x-50 xl:translate-y-9"
             >
                 <div class="self-center">
                     <img src="zdjecia/ikonki/5.png" alt=""
@@ -334,11 +393,11 @@
                         loading="lazy" aria-hidden="true">
                 </div>
         
-                <h3 class="-mt-3 font-times text-xl md:text-2xl lg:text-lg lg:leading-tight">
+                <h3 class="-mt-3 font-times text-xl md:text-2xl lg:text-lg lg:leading-tight xl:text-xl 2xl:text-2xl">
                     Moi uczniowie mają ze mną stały kontakt.
                 </h3>
         
-                <p class="font-cormorant italic md:text-lg lg:text-base lg:leading-snug">
+                <p class="font-cormorant italic md:text-lg lg:text-base lg:leading-snug xl:text-lg 2xl:text-xl">
                     Odpowiadam na pytania także poza godzinami zajęć.
                     Moi uczniowie mogą pisać do mnie i odsyłać
                     zdjęcia wykonanych zadań o każdej porze dnia i nocy.
@@ -356,13 +415,13 @@
             >
                 <path
                     d="M 80 0 L 1600 0 L 1600 620 C 1100 550, 530 480, 80 0 Z"
-                    fill="#475071"
+                    fill="var(--fala)"
                 />
         
                 <path
                     d="M 80 0 C 530 480, 1100 550, 1600 620"
                     fill="none"
-                    stroke="var(--wave-edge)"
+                    stroke="var(--fala)"
                     stroke-width="28"
                 />
         
@@ -376,21 +435,21 @@
         
             <!-- EKSPERYMENTY -->
             <section
-                class="relative grid items-center justify-center bg-bgblue
+                class="relative grid items-center justify-center bg-fala
                        text-center font-times text-light md:px-12
                        lg:static lg:block lg:bg-transparent lg:px-0"
             >
                 <div
                     class="p-5
                            lg:absolute lg:top-16 lg:left-[40%]
-                           lg:z-10 lg:w-[31%] lg:p-0 xl:left-[35%]"
+                           lg:z-10 lg:w-[31%] lg:p-0 xl:left-[35%] xl:w-[35%]"
                 >
-                    <h2 class="pt-2 text-2xl font-bold md:text-3xl lg:text-2xl">
+                    <h2 class="pt-2 text-2xl font-bold md:text-3xl lg:text-lg dark:text-background xl:text-xl 2xl:text-2xl">
                         Przeprowadzam z uczniami eksperymenty fizyczne,
                         ponieważ nauka przez praktykę jest również ważna.
                     </h2>
         
-                    <p class="pt-5 md:text-lg">
+                    <p class="pt-5 md:text-lg lg:text-base dark:text-background xl:text-lg 2xl:text-xl">
                         Jeśli warunki na to pozwalają, staram się poświęcić
                         trochę czasu na wykonanie ćwiczeń eksperymentalnych.
                         To pozwala na lepsze zrozumienie zjawisk fizycznych,
@@ -401,9 +460,8 @@
         
                 <div
                     class="grid items-center justify-center p-3 md:p-10
-                           lg:absolute lg:top-45 lg:right-[2%]
-                           lg:z-10 lg:w-[24%] lg:p-0
-                           xl:top-10 xl:right-[5%]"
+                           lg:absolute lg:top-16 lg:right-[2%]
+                           lg:z-10 lg:w-[24%] lg:p-0 xl:w-[27%]"
                 >
                     <img
                         src="zdjecia/obrazki/eksperymenty.png"
@@ -449,7 +507,7 @@
                             C 980 485, 1190 500, 1470 555
                         "
                         fill="none"
-                        stroke="var(--wave-edge)"
+                        stroke="var(--fala)"
                         stroke-width="28"
                         stroke-linecap="round"
                     />
@@ -477,11 +535,11 @@
             >
                 <!-- NAGŁÓWEK I OPIS -->
                 <div class="lg:max-w-[43%]">
-                    <h2 class="text-3xl font-bold md:text-3xl lg:text-2xl">
+                    <h2 class="text-3xl font-bold md:text-3xl lg:text-lg xl:text-xl 2xl:text-2xl">
                         Realna wizja postępów.
                     </h2>
         
-                    <p class="md:text-lg">
+                    <p class="md:text-lg lg:text-base xl:text-lg 2xl:text-xl">
                         Każdy uczeń otrzymuje dostęp do własnej
                         <span class="font-bold dark:text-pink">
                             tablicy postępów
@@ -496,8 +554,8 @@
                 <!-- KOŁA + DOLNY OPIS -->
                 <div
                     class="lg:mt-8 lg:grid
-                           lg:grid-cols-[1.3fr_1fr]
-                           lg:items-center lg:gap-8"
+                            lg:grid-cols-[max-content_1fr]
+                           lg:items-center lg:gap-10"
                 >
                     <div
                         class="flex items-start justify-center gap-5 pt-5
@@ -631,7 +689,7 @@
                     </div>
         
                     <!-- DOLNY OPIS -->
-                    <p class="pt-5 md:text-lg lg:pt-0">
+                    <p class="pt-5 md:text-lg lg:pt-0 lg:text-base lg:w-100 xl:text-lg 2xl:text-xl">
                         Dzięki procentowym podsumowaniom uczeń i rodzic
                         mogą na bieżąco zobaczyć, co zostało już opanowane,
                         co wymaga jeszcze powtórki i jak zmieniają się
@@ -646,28 +704,28 @@
             id="filozofia"
             class="p-5 font-times md:px-12 md:pt-20
                 lg:grid lg:grid-cols-[1fr_1.2fr]
-                lg:items-stretch lg:gap-0
-                    lg:py-0 lg:p-0"
+                lg:items-stretch lg:gap-0 lg:px-0
+                    lg:py-0 lg:p-0 xl:pb-20"
         >
         <!-- LEWA KOLUMNA -->
             <div class="lg:py-16 xl:py-20 lg:pl-10">
                 <h2 class="text-center lg:mb-8">
                     <span
                         class="block font-montserrat text-7xl font-bold
-                            text-pink md:text-8xl"
+                            text-pink md:text-8xl 2xl:text-9xl"
                     >
                         MOJA
                     </span>
         
                     <span
                         class="-mt-8 block font-script text-6xl
-                            md:text-7xl"
+                            md:text-7xl 2xl:text-8xl"
                     >
                         Filozofia
                     </span>
                 </h2>
         
-                <div class="space-y-4 pt-2 md:text-lg">
+                <div class="space-y-4 pt-2 md:text-lg lg:text-base xl:text-lg 2xl:text-xl">
                     <p>
                         Wychodzę z założenia, że fizyka oraz matematyka
                         to piękne dziedziny nauki i niesamowity dorobek
@@ -713,10 +771,27 @@
                     alt=""
                     loading="lazy"
                     aria-hidden="true"
-                    class="md:w-150
-                        lg:absolute lg:inset-0
-                        lg:h-full lg:w-full
-                        lg:object-contain lg:object-center"
+                    class="md:w-150 block lg:hidden"
+                >
+                <img
+                src="zdjecia/lidia/nutyXL.png"
+                alt=""
+                loading="lazy"
+                aria-hidden="true"
+                class="md:w-150 hidden
+                    lg:absolute lg:inset-0
+                    lg:h-full lg:w-full
+                    lg:object-cover lg:object-center lg:block"
+                >
+                <img
+                src="zdjecia/lidia_2xl/nuty.png"
+                alt=""
+                loading="lazy"
+                aria-hidden="true"
+                class="md:w-150 hidden
+                    lg:absolute lg:inset-0
+                    lg:h-full lg:w-full
+                    lg:object-cover lg:object-center xl:block"
                 >
             </figure>
         </section>
@@ -726,8 +801,8 @@
             id="forma-zajec"
             class="relative isolate pt-10 text-center
                 md:px-12 md:pt-15
-                lg:min-h-[800px] lg:overflow-hidden
-                    lg:px-8 lg:pt-24 lg:pb-20
+                lg:min-h-100 lg:overflow-hidden
+                    lg:px-8 lg:pt-24 lg:pb-20 xl:pt-25
                 "
         >
     <!-- NAGŁÓWEK -->
@@ -753,9 +828,9 @@
                         src="zdjecia/obrazki/1.png"
                         alt="Zajęcia stacjonarne"
                         class="w-40 md:w-50
-                            lg:h-[280px] lg:w-[280px]
+                            lg:h-40 lg:w-40
                             lg:rounded-full lg:object-cover
-                            xl:h-[300px] xl:w-[300px]"
+                            xl:h-40 xl:w-40"
                         loading="lazy"
                     >
 
@@ -773,9 +848,9 @@
                         src="zdjecia/obrazki/2.png"
                         alt="Zajęcia online"
                         class="w-40 md:w-50
-                            lg:h-[280px] lg:w-[280px]
+                            lg:h-40 lg:w-40
                             lg:rounded-full lg:object-cover
-                            xl:h-[300px] xl:w-[300px]"
+                            xl:h-40 xl:w-40"
                         loading="lazy"
                     >
 
@@ -794,7 +869,7 @@
                     href="cennik.html"
                     class="w-70 rounded-4xl bg-pink p-3
                         font-times text-xl text-light md:text-2xl
-                        lg:w-[420px] lg:py-5 lg:text-3xl
+                        lg:py-5 lg:text-2xl
                         lg:shadow-2xl"
                 >
                     Sprawdź cennik
@@ -880,27 +955,27 @@
             </div>
         </section>
 
-        <section id="opinie" aria-labelledby="opinie-title" >
+        <section id="opinie" aria-labelledby="opinie-title" class="xl:pt-20">
             <h2 id="opinie-title" class="text-center font-montserrat text-6xl font-bold uppercase text-pink">
                 Opinie
             </h2>
 
-            <div class="swiper opinie-desktop relative md:h-120  lg:px-10 lg:h-125">
+            <div class="swiper opinie-desktop relative md:h-120  lg:px-10 lg:h-125 xl:h-180">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/1.png" alt="Opinia 1" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
-                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/2.png" alt="Opinia 2" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
-                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/3.png" alt="Opinia 3" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
-                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/4.png" alt="Opinia 4" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
-                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/5.png" alt="Opinia 5" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
-                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/6.png" alt="Opinia 6" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
-                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/7.png" alt="Opinia 7" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
-                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/8.png" alt="Opinia 8" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
-                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/9.png" alt="Opinia 9" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
-                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/10.png" alt="Opinia 10" class="gallery-img  h-auto w-full rounded-2xl object-contain" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/2.png" alt="Opinia 1" class="gallery-img  h-auto w-full rounded-2xl object-contain xl:w-[90%]" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/10.png" alt="Opinia 2" class="gallery-img  h-auto w-full rounded-2xl object-contain xl:w-[90%]" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/3.png" alt="Opinia 3" class="gallery-img  h-auto w-full rounded-2xl object-contain xl:w-[90%]" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/4.png" alt="Opinia 4" class="gallery-img  h-auto w-full rounded-2xl object-contain xl:w-[90%]" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/5.png" alt="Opinia 5" class="gallery-img  h-auto w-full rounded-2xl object-contain xl:w-[90%]" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/6.png" alt="Opinia 6" class="gallery-img  h-auto w-full rounded-2xl object-contain xl:w-[90%]" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/7.png" alt="Opinia 7" class="gallery-img  h-auto w-full rounded-2xl object-contain xl:w-[90%]" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/8.png" alt="Opinia 8" class="gallery-img  h-auto w-full rounded-2xl object-contain xl:w-[90%]" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/9.png" alt="Opinia 9" class="gallery-img  h-auto w-full rounded-2xl object-contain xl:w-[90%]" loading="lazy"></div></div>
+                    <div class="swiper-slide"><div class="flex items-center justify-center p-12 md:p-10 lg:p-8"><img src="zdjecia/opinie/1.png" alt="Opinia 10" class="gallery-img  h-auto w-full rounded-2xl object-contain xl:w-[90%]" loading="lazy"></div></div>
                 </div>
                 <button
                     type="button"
-                    class="button-prev absolute left-1 top-1/2 z-20 h-10 w-10 -translate-y-1/2 rounded-full bg-pink"
+                    class="button-prev absolute left-1 top-2/5 z-20 h-10 w-10 -translate-y-2/5 rounded-full bg-pink lg:left-10"
                     aria-label="Poprzednia opinia"
                 >
                     ←
@@ -908,7 +983,7 @@
 
                 <button
                     type="button"
-                    class="button-next absolute right-1 top-1/2 z-20 h-10 w-10 -translate-y-1/2 rounded-full bg-pink"
+                    class="button-next absolute right-1 top-2/5 z-20 h-10 w-10 -translate-y-2/5 rounded-full bg-pink lg:right-10"
                     aria-label="Następna opinia"
                 >
                     →
@@ -916,65 +991,313 @@
             </div>
         </section>
 
-        <section id="kontakt" class="p-10 pt-10 text-center">
-            <h2 class="font-times text-4xl">Chcesz się ze mną skontaktować?</h2>
-
-            <div class="flex items-center justify-center pt-5">
-                <a
-                    href="sms:501969992"
-                    class="inline-flex w-50 items-center justify-center gap-3 rounded-4xl bg-pink p-3 font-times text-xl text-light shadow-2xl"
+        <section
+            id="kontakt"
+            class="p-10 pt-10 text-center font-times
+                lg:px-16 lg:pt-20 lg:pb-16"
+        >
+            <!-- NAGŁÓWEK -->
+            <h2
+                class="font-times text-4xl
+                    lg:mx-auto lg:max-w-[650px]
+                    lg:text-5xl lg:leading-none"
+            >
+                Chcesz się ze mną skontaktować?
+            </h2>
+        
+            <!-- PRZYCISKI + TELEFON -->
+            <div
+                class="lg:mx-auto lg:mt-14
+                    lg:grid lg:max-w-[1100px]
+                    lg:grid-cols-[1fr_1fr_1fr]
+                    lg:items-center lg:gap-x-12"
+            >
+                <!-- NAPISZ SMS -->
+                <div class="flex items-center justify-center pt-5 lg:pt-0">
+                    <a
+                        href="sms:+48501969992"
+                        class="inline-flex w-50 items-center justify-center
+                            gap-3 rounded-4xl bg-pink p-3
+                            text-xl text-light shadow-2xl
+                            lg:w-[300px] lg:py-4 lg:text-xl"
+                    >
+                        <img
+                            src="zdjecia/ikonki/1.png"
+                            alt=""
+                            class="w-10 lg:w-12"
+                            aria-hidden="true"
+                        >
+                        <span>Napisz SMS</span>
+                    </a>
+                </div>
+        
+                <!-- TELEFON + NUMER -->
+                <div
+                    class="flex flex-col items-center justify-center
+                        lg:col-start-2 lg:row-start-1"
                 >
-                    <img src="zdjecia/ikonki/1.png" alt="" class="w-10" aria-hidden="true">
-                    <span>Napisz SMS</span>
-                </a>
-            </div>
-
-            <div class="flex justify-center">
-                <img src="zdjecia/ikonki/9.png" alt="" loading="lazy" aria-hidden="true">
-            </div>
-
-            <a href="tel:501969992" class="font-times text-xl md:text-2xl">Tel: 501969992</a>
-
-            <div class="flex items-center justify-center pt-5">
-                <a
-                    href="tel:501969992"
-                    class="inline-flex w-50 items-center justify-center gap-3 rounded-4xl bg-pink p-3 font-times text-xl text-light shadow-2xl"
+                    <img
+                        src="zdjecia/ikonki/9.png"
+                        alt=""
+                        class="lg:w-[280px] xl:w-[200px]"
+                        loading="lazy"
+                        aria-hidden="true"
+                    >
+        
+                    <a
+                        href="tel:+48501969992"
+                        class="text-xl md:text-2xl
+                            lg:mt-4 lg:text-3xl"
+                    >
+                        Tel: 501969992
+                    </a>
+                </div>
+        
+                <!-- ZADZWOŃ -->
+                <div
+                    class="flex items-center justify-center pt-5
+                        lg:col-start-3 lg:row-start-1 lg:pt-0"
                 >
-                    <img src="zdjecia/ikonki/10.png" alt="" class="w-10" aria-hidden="true">
-                    <span>Zadzwoń</span>
-                </a>
+                    <a
+                        href="tel:+48501969992"
+                        class="inline-flex w-50 items-center justify-center
+                            gap-3 rounded-4xl bg-pink p-3
+                            text-xl text-light shadow-2xl
+                            lg:w-[300px] lg:py-4 lg:text-2xl"
+                    >
+                        <img
+                            src="zdjecia/ikonki/10.png"
+                            alt=""
+                            class="w-10 lg:hidden"
+                            aria-hidden="true"
+                        >
+                        <span>Zadzwoń</span>
+                    </a>
+                </div>
             </div>
-
-            <p class="p-3 pt-10 font-times text-xl md:text-2xl">
-                Chętnie odpowiem na wszystkie pytania i w razie potrzeby podam dodatkowe informacje. Zapraszam do kontaktu!
+        
+            <!-- DOLNY OPIS -->
+            <p
+                class="p-3 pt-10 text-xl md:text-2xl
+                    lg:mx-auto lg:mt-12 lg:max-w-[550px]
+                    lg:p-0 lg:text-xl lg:leading-relaxed"
+            >
+                Chętnie odpowiem na wszystkie pytania
+                i w razie potrzeby podam dodatkowe informacje.
+                Zapraszam do kontaktu!
             </p>
         </section>
     </main>
 
-    <footer class="mt-10 block lg:hidden">
-        <div class="flex flex-col items-center justify-center">
-            <img src="zdjecia/przejscie/1.png" alt="" aria-hidden="true" class="w-full">
-        </div>
+    <footer class="mt-10 font-cormorant">
 
-        <div class="flex items-center justify-center md:gap-5">
-            <img src="zdjecia/ikonki/7.png" alt="" class="w-20" aria-hidden="true">
-
+        <!-- FOOTER MOBILE / MD -->
+        <div class="lg:hidden">
+    
             <div class="flex flex-col items-center justify-center">
-                <img src="zdjecia/obrazki/logo.png" alt="" class="w-50 block dark:hidden" aria-hidden="true">
-                <img src="zdjecia/obrazki_ciemne/logo.png" alt="" class="w-50 hidden dark:block" aria-hidden="true">
-                <span class="font-cormorant text-lg">Rosa Mirabilis</span>
+                <img
+                    src="zdjecia/przejscie/1.png"
+                    alt=""
+                    aria-hidden="true"
+                    class="w-full"
+                >
             </div>
-
-            <img src="zdjecia/ikonki/8.png" alt="" class="w-20" aria-hidden="true">
+    
+            <div class="flex items-center justify-center md:gap-5">
+                <img
+                    src="zdjecia/ikonki/7.png"
+                    alt=""
+                    class="w-20"
+                    aria-hidden="true"
+                >
+    
+                <div class="flex flex-col items-center justify-center">
+                    <img
+                        src="zdjecia/obrazki/logo.png"
+                        alt=""
+                        class="block w-50 dark:hidden"
+                        aria-hidden="true"
+                    >
+    
+                    <img
+                        src="zdjecia/obrazki_ciemne/logo.png"
+                        alt=""
+                        class="hidden w-50 dark:block"
+                        aria-hidden="true"
+                    >
+    
+                    <span class="text-lg">Rosa Mirabilis</span>
+                </div>
+    
+                <img
+                    src="zdjecia/ikonki/8.png"
+                    alt=""
+                    class="w-20"
+                    aria-hidden="true"
+                >
+            </div>
+    
+            <div class="flex items-center justify-center pt-3 text-center">
+                <p>
+                    © 2026 RosaMirabilis · Wszelkie prawa zastrzeżone ·
+                    Autor: Maksymilian Kunikowski ·
+                    <a href="polityka-prywatnosci.html">
+                        Polityka prywatności
+                    </a>
+                </p>
+            </div>
         </div>
+    
+        <!-- FOOTER LG / XL -->
+        <div class="hidden lg:block">
+            <div class="flex flex-col items-center justify-center">
+                <img
+                    src="zdjecia/przejscie/xl.png"
+                    alt=""
+                    aria-hidden="true"
+                    class="block w-full xl:hidden"
+                >
+                <img
+                    src="zdjecia/przejscie/2xl.png"
+                    alt=""
+                    aria-hidden="true"
+                    class="hidden w-full xl:block"
+                >
+            </div>
+            <div class="lg:px-12 xl:px-40 2xl:px-50">
+                <div
+                    class="grid grid-cols-[1fr_1.2fr_1fr]
+                           items-start gap-x-12 xl:gap-x-20"
+                >
+                    <!-- LEWA KOLUMNA - SOCIAL MEDIA -->
+                    <div class="flex flex-col gap-5 pt-10">
+        
+                        <a
+                            href="https://www.instagram.com/rosamirabilis/"
+                            class="flex items-center gap-5 text-xl
+                                   transition-opacity hover:opacity-70"
+                        >
+                            <!-- MIEJSCE NA IKONĘ INSTAGRAMA -->
+                            <img src="zdjecia/ikonki/7.png" alt="" class="h-14 w-14 shrink-0">
+        
+                            <span>rosamirabilis</span>
+                        </a>
+        
+                        <a
+                            href=""
+                            class="flex items-center gap-5 text-xl
+                                   transition-opacity hover:opacity-70"
+                        >
+                            <!-- MIEJSCE NA IKONĘ TIKTOKA -->
+                            <img src="zdjecia/ikonki/8.png" alt="" class="h-14 w-14 shrink-0">
+                            <span>rosamirabilis</span>
+                        </a>
+                    </div>
+        
+                    <!-- ŚRODKOWA KOLUMNA - LOGO -->
+                    <div class="flex flex-col items-center justify-center">
+        
+                        <!-- MIEJSCE NA GRAFIKĘ LOGO -->
+                        <div class="flex h-45 w-full items-center justify-center ">
+                            <img
+                            src="zdjecia/obrazki_xl/logo.png"
+                            alt=""
+                            class="block lg:w-70 dark:hidden 2xl:hidden"
+                        >
+                        
+                        <!-- LG / XL - DARK -->
+                        <img
+                            src="zdjecia/obrazki_ciemne/logo.png"
+                            alt=""
+                            class="hidden lg:w-70 dark:block 2xl:dark:hidden"
+                        >
+                        
+                        <!-- 2XL - LIGHT -->
+                        <img
+                            src="zdjecia/obrazki_2xl/logo.png"
+                            alt=""
+                            class="hidden 2xl:block 2xl:w-90 2xl:dark:hidden"
+                        >
+                        
+                        <!-- 2XL - DARK -->
+                        <img
+                            src="zdjecia/obrazki_ciemne_2xl/logo.png"
+                            alt=""
+                            class="hidden 2xl:w-90 2xl:dark:block"
+                        >
+                        </div>
+        
+                        <span class="mt-5 text-center text-3xl tracking-[0.15em]">
+                            Rosa Mirabilis
+                        </span>
+                    </div>
+        
+                    <!-- PRAWA KOLUMNA - NAWIGACJA -->
+                    <nav aria-label="Nawigacja w stopce">
+        
+                        <h2
+                            class="mb-6 font-cormorant text-4xl
+                                   font-thin uppercase text-[#475071]
+                                   dark:text-text"
+                        >
+                            Navigate
+                        </h2>
+        
+                        <div class="grid grid-cols-2 gap-x-8">
+        
+                            <!-- PIERWSZA KOLUMNA -->
+                            <div class="flex flex-col gap-4 w-30">
+                                <a href="index.html"
+                                   class="text-xl hover:opacity-70 font-bold">
+                                    Strona główna
+                                </a>
+        
+                                <a href="#filozofia"
+                                   class="text-xl hover:opacity-70">
+                                    Moja filozofia
+                                </a>
+        
+                                <a href="#opinie"
+                                   class="text-xl hover:opacity-70">
+                                    Opinie
+                                </a>
+                            </div>
+        
+                            <!-- DRUGA KOLUMNA -->
+                            <div class="flex flex-col gap-4">
+                                <a href="#kontakt"
+                                   class="text-xl hover:opacity-70">
+                                    Kontakt
+                                </a>
+        
+                                <a href="cennik.html"
+                                   class="text-xl hover:opacity-70">
+                                    Cennik
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
 
-        <div class="flex flex-row items-center justify-center pt-3 text-center font-cormorant">
-            <p>
-                © 2026 RosaMirabilis · Wszelkie prawa zastrzeżone · Autor: Maksymilian Kunikowski ·
-                <a href="polityka-prywatnosci.html">Polityka prywatności</a>
-            </p>
+            </div>
+            <!-- TRZY KOLUMNY -->
+    
+            <!-- COPYRIGHT -->
+            <div class="mt-10 pb-3 text-center">
+                <p class="text-lg xl:text-xl">
+                    © 2026 RosaMirabilis · Wszelkie prawa zastrzeżone ·
+                    Autor: Maksymilian Kunikowski ·
+                    <a
+                        href="polityka-prywatnosci.html"
+                        class="hover:underline"
+                    >
+                        Polityka prywatności
+                    </a>
+                </p>
+            </div>
         </div>
     </footer>
+
 
 
 

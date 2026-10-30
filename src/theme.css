@@ -10,22 +10,23 @@
     --color-background: var(--background);
     --color-text: var(--text);
     --color-korepetycje: var(--heading);
+    --color-fala: var(--fala);
 
     --color-pink: #a97794;
     --color-dark: #323232;
     --color-light: #e8e9f6;
-    --color-bgblue: #475071;
+    --color-bgblue: #475071;    
 }
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root,
 [data-theme="light"] {
-    --background: #e8e9f6;
+    --background: #e9e2f3;
     --text: #000000;
     --heading: #323232;
 
-    --wave-edge: #475071;
+    --fala: #7c3f65;
     --progress-track: #ddbdca;
     --progress-value: #ad7899;
 
@@ -38,11 +39,11 @@
 }
 
 [data-theme="dark"] {
-    --background: #3a3a3a;
+    --background: #2f2933;
     --text: #e8e9f6;
     --heading: #e8e9f6;
 
-    --wave-edge: #475071;
+    --fala:#efdee8;
     --progress-track: #6f5c66;
     --progress-value: #c18aa8;
 

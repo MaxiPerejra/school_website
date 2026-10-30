@@ -88,7 +88,7 @@
         if (!slider || typeof window.Swiper !== "function") return;
 
         new window.Swiper(slider, {
-            
+            speed: 800,
             loop: true,
             initialSlide: 1,
             slidesPerView: 1,
@@ -185,6 +185,89 @@
             }, 300);
         });
     }
+
+
+    function initDesktopMenu() {
+        const menu = document.querySelector("#desktop-menu");
+        const toggle = document.querySelector("#desktop-menu-toggle");
+    
+        if (!menu || !toggle) return;
+    
+        const desktop = window.matchMedia("(min-width: 1024px)");
+    
+        function openMenu() {
+            if (!desktop.matches) return;
+    
+            menu.classList.add("is-open");
+            toggle.setAttribute("aria-expanded", "true");
+        }
+    
+        function closeMenu() {
+            menu.classList.remove("is-open");
+            toggle.setAttribute("aria-expanded", "false");
+        }
+    
+        // OTWIERANIE PO NAJECHANIU MYSZKĄ
+        menu.addEventListener("pointerenter", (event) => {
+            if (event.pointerType === "mouse") {
+                openMenu();
+            }
+        });
+    
+        // ZAMYKANIE PO OPUSZCZENIU CAŁEGO MENU
+        menu.addEventListener("pointerleave", (event) => {
+            if (event.pointerType === "mouse") {
+                closeMenu();
+            }
+        });
+    
+        // KLIKANIE NA URZĄDZENIACH DOTYKOWYCH
+        toggle.addEventListener("click", () => {
+            if (!desktop.matches) return;
+    
+            if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+                return;
+            }
+    
+            if (menu.classList.contains("is-open")) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+    
+        // OBSŁUGA KLAWIATURY
+        menu.addEventListener("focusin", openMenu);
+    
+        menu.addEventListener("focusout", (event) => {
+            if (!menu.contains(event.relatedTarget)) {
+                closeMenu();
+            }
+        });
+    
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
+    
+        // ZAMYKANIE PO WYBRANIU LINKU
+        menu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", closeMenu);
+        });
+    
+        // ZAMYKANIE PO KLIKNIĘCIU POZA MENU
+        document.addEventListener("pointerdown", (event) => {
+            if (!menu.contains(event.target)) {
+                closeMenu();
+            }
+        });
+    
+        desktop.addEventListener("change", closeMenu);
+    }
+    
+    initDesktopMenu();
+
 
 
     
