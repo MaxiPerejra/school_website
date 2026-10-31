@@ -16,6 +16,8 @@
     --color-dark: #323232;
     --color-light: #e8e9f6;
     --color-bgblue: #475071;    
+
+    --breakpoint-3xl: 105rem;
 }
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
