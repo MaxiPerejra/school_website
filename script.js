@@ -95,7 +95,7 @@
     
         const total = cards.length;
     
-        // Startujemy od drugiej opinii.
+
         let activeIndex = 1;
     
         function updateCards() {
@@ -154,7 +154,7 @@
             changeSlide(1);
         });
     
-        // OBSŁUGA KLAWIATURY
+        
         ring.addEventListener("keydown", (event) => {
             if (event.key === "ArrowLeft") {
                 event.preventDefault();
@@ -167,7 +167,7 @@
             }
         });
     
-        // PRZESUWANIE PALCEM
+        
         let startX = null;
         let startY = null;
         let ignoreClick = false;
@@ -193,7 +193,7 @@
             if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
                 changeSlide(dx < 0 ? 1 : -1);
     
-                // Nie otwieraj lightboxa po przesunięciu.
+                
                 ignoreClick = true;
     
                 setTimeout(() => {
@@ -310,21 +310,21 @@
             toggle.setAttribute("aria-expanded", "false");
         }
     
-        // OTWIERANIE PO NAJECHANIU MYSZKĄ
+        
         menu.addEventListener("pointerenter", (event) => {
             if (event.pointerType === "mouse") {
                 openMenu();
             }
         });
     
-        // ZAMYKANIE PO OPUSZCZENIU CAŁEGO MENU
+       
         menu.addEventListener("pointerleave", (event) => {
             if (event.pointerType === "mouse") {
                 closeMenu();
             }
         });
     
-        // KLIKANIE NA URZĄDZENIACH DOTYKOWYCH
+        
         toggle.addEventListener("click", () => {
             if (!desktop.matches) return;
     
@@ -339,7 +339,7 @@
             }
         });
     
-        // OBSŁUGA KLAWIATURY
+       
         menu.addEventListener("focusin", openMenu);
     
         menu.addEventListener("focusout", (event) => {
@@ -354,12 +354,12 @@
             }
         });
     
-        // ZAMYKANIE PO WYBRANIU LINKU
+        
         menu.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", closeMenu);
         });
     
-        // ZAMYKANIE PO KLIKNIĘCIU POZA MENU
+        
         document.addEventListener("pointerdown", (event) => {
             if (!menu.contains(event.target)) {
                 closeMenu();
@@ -383,8 +383,7 @@
             if (finished) return;
             finished = true;
     
-            // Krótkie intro, ale bez zbędnego czekania
-            // na szybkich urządzeniach.
+
             const remaining = reduceMotion
                 ? 0
                 : Math.max(0, 2500 - performance.now());
@@ -399,7 +398,7 @@
             }, remaining);
         }
     
-        // Zniknięcie po załadowaniu strony
+        
         if (document.readyState === "complete") {
             hideLoader();
         } else {
@@ -408,7 +407,7 @@
             });
         }
     
-        // Zabezpieczenie na wolne zasoby
+        
         setTimeout(hideLoader, 3500);
     }
 
